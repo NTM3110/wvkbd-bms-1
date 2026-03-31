@@ -201,8 +201,8 @@ drw_do_rectangle(struct drwsurf *ds, Color color, uint32_t x, uint32_t y,
         cairo_set_source_rgba(
           d->cairo, color.bgra[2] / (double)255, color.bgra[1] / (double)255, 
           color.bgra[0] / (double)255, color.bgra[3] / (double)255);
-        cairo_fill (d->cairo);
-        cairo_set_source_rgba(d->cairo, 0, 0, 0, 0.9);
+        cairo_fill_preserve(d->cairo);
+        cairo_set_source_rgba(d->cairo, 0.8, 0.8, 0.8, 0.9);
         cairo_set_line_width(d->cairo, 1.0);
         cairo_stroke(d->cairo);
 
@@ -213,7 +213,10 @@ drw_do_rectangle(struct drwsurf *ds, Color color, uint32_t x, uint32_t y,
         cairo_set_source_rgba(
             d->cairo, color.bgra[2] / (double)255, color.bgra[1] / (double)255,
             color.bgra[0] / (double)255, color.bgra[3] / (double)255);
-        cairo_fill(d->cairo);
+        cairo_fill_preserve(d->cairo);
+        cairo_set_source_rgba(d->cairo, 0.8, 0.8, 0.8, 0.9);
+        cairo_set_line_width(d->cairo, 1.0);
+        cairo_stroke(d->cairo);
 
         cairo_restore(d->cairo);
     }

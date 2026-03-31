@@ -175,12 +175,6 @@ static struct layout layouts[NumLayouts] = {
  * - layout: layout to switch to when key is pressed
  */
 static struct key keys_full[] = {
-  {"Esc", "Esc", 1.0, Code, KEY_ESC, .scheme = 1},
-  {"Ctr", "Ctr", 1.0, Mod, Ctrl, .scheme = 1},
-  {"↑", "↑", 1.0, Code, KEY_UP, .scheme = 1},
-  {"↓", "↓", 1.0, Code, KEY_DOWN, .scheme = 1},
-  {"←", "←", 1.0, Code, KEY_LEFT, .scheme = 1},
-  {"→", "→", 1.0, Code, KEY_RIGHT, .scheme = 1},
   {"'", "\"", 1.0, Code, KEY_APOSTROPHE, &layouts[ComposeBracket] },
   {"-", "_", 1.0, Code, KEY_MINUS, &layouts[ComposeMath] },
   {"/", ">", 1.0, Code, KEY_SLASH,  &layouts[ComposePunctuation] },
@@ -236,8 +230,7 @@ static struct key keys_full[] = {
   {"", "", 0.0, EndRow},
 
   {"▼", "▼", 1.0, Hide, .scheme = 1},
-  {"⌨͕", "⌨͔", 1.5, NextLayer, .scheme = 1},
-  {"Cmp", "Cmp", 1.0, Compose, .scheme = 1},
+  {"?123", "?123", 1.5, Layout, 0, &layouts[Special], .scheme = 1},
   {",", "'", 1.0, Code, KEY_COMMA, &layouts[ComposeMath]},
   {"", "Tab", 4.0, Code, KEY_SPACE},
   {".", "?", 1.0, Code, KEY_DOT, &layouts[ComposePunctuation]},
@@ -323,17 +316,6 @@ static struct key keys_full_wide[] = {
 };
 
 static struct key keys_special[] = {
-  {"Esc", "Esc", 1.0, Code, KEY_ESC, .scheme = 1},
-  {"Alt", "Alt", 1.0, Mod, Alt, .scheme = 1},
-  {"↑", "↑", 1.0, Code, KEY_UP, .scheme = 1},
-  {"↓", "↓", 1.0, Code, KEY_DOWN, .scheme = 1},
-  {"←", "←", 1.0, Code, KEY_LEFT, .scheme = 1},
-  {"→", "→", 1.0, Code, KEY_RIGHT, .scheme = 1},
-  {"⇈", "⇈", 1.0, Code, KEY_PAGEUP, .scheme = 1},
-  {"⇊", "⇊", 1.0, Code, KEY_PAGEDOWN, .scheme = 1},
-  {"⇤", "⇤", 1.0, Code, KEY_HOME, .scheme = 1},
-  {"⇥", "⇥", 1.0, Code, KEY_END, .scheme = 1},
-  {"", "", 0.0, EndRow},
 
   {"1", "!", 1.0, Code, KEY_1},
   {"2", "@", 1.0, Code, KEY_2},
@@ -372,7 +354,6 @@ static struct key keys_special[] = {
 
   {"Abc", "Abc", 1.0, BackLayer, .scheme = 1},
   {"▼", "▼", 1.0, Hide, .scheme = 1},
-  {"⌨͕", "⌨͔", 1.0, NextLayer, .scheme = 1},
   {",", "'", 1.0, Code, KEY_COMMA, &layouts[ComposeMath]},
   {"", "Tab", 4.0, Code, KEY_SPACE},
   {".", "?", 1.0, Code, KEY_DOT, &layouts[ComposePunctuation]},
@@ -505,10 +486,9 @@ static struct key keys_dialer[] = {
   {"", "", 0.0, EndRow},
   {"*", "*", 1.0, Code, KEY_KPASTERISK},
   {"0", "0", 1.0, Code, KEY_0},
-  {"#", "#", 1.0, Code, KEY_3, 0, Shift},
+  {".", ".", 1.0, Code, KEY_DOT},
   {"", "", 0.0, EndRow},
   {"▼", "▼", 1.0, Hide, .scheme = 1},
-  {"⌨͕", "⌨͔", 1.0, NextLayer, .scheme = 1},
   {"Enter", "Enter", 2.0, Code, KEY_ENTER, .scheme = 1},
 
   /* end of layout */
