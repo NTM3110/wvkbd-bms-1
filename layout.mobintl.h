@@ -3,7 +3,7 @@
 #define KBD_PIXEL_HEIGHT 525
 
 /* how tall the keyboard should be by default (can be overriden) */
-#define KBD_PIXEL_LANDSCAPE_HEIGHT 180
+#define KBD_PIXEL_LANDSCAPE_HEIGHT 240
 
 /* spacing around each key */
 #define KBD_KEY_BORDER 2
