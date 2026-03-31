@@ -1152,7 +1152,6 @@ static struct key keys_landscape[] = {
   {",", "'", 1.0, Code, KEY_COMMA, &layouts[ComposeMath]},
   {"", "Space", 5.0, Code, KEY_SPACE},
   {".", "?", 1.0, Code, KEY_DOT, &layouts[ComposePunctuation]},
-  {"", "", 0.0, EndRow},
 
   /* end of layout */
   {"", "", 0.0, Last},
@@ -1207,7 +1206,6 @@ static struct key keys_landscape_special[] = {
   {"0", "0", 2.0, Code, KEY_0},
   {".", ".", 1.0, Code, KEY_DOT},
   {"▼", "▼", 1.5, Hide, .scheme = 1},
-  {"", "", 0.0, EndRow},
 
   /* end of layout */
   {"", "", 0.0, Last},
